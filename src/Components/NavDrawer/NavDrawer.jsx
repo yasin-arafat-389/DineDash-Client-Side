@@ -34,7 +34,7 @@ const NavDrawer = () => {
         overlay={false}
         placement="left"
         open={open}
-        className="p-4 w-[250px] md:hidden lg:hidden"
+        className="p-4 w-[250px] md:hidden lg:hidden overflow-auto"
       >
         <div>
           <img
@@ -95,6 +95,73 @@ const NavDrawer = () => {
             >
               Shop
             </NavLink>
+
+            <Accordion
+              open={openDropDown === 1}
+              icon={
+                <FaChevronDown
+                  strokeWidth={2.5}
+                  className={`mx-auto h-4 w-4 transition-transform ${
+                    openDropDown === 1 ? "rotate-180" : ""
+                  }`}
+                />
+              }
+            >
+              <ListItem className="p-0" selected={openDropDown === 1}>
+                <AccordionHeader
+                  onClick={() => handleOpen(1)}
+                  className="border border-gray-600 p-3 rounded-lg"
+                >
+                  <Typography className="mr-auto font-bold">
+                    About Us
+                  </Typography>
+                </AccordionHeader>
+              </ListItem>
+
+              <AccordionBody className="py-1">
+                <List className="p-0">
+                  <Link
+                    to={"/our-mission"}
+                    onClick={() => dispatch(closeNavDrawer())}
+                  >
+                    <ListItem>
+                      <ListItemPrefix>
+                        <FaChevronRight strokeWidth={3} className="h-3 w-5" />
+                      </ListItemPrefix>
+                      Our Mission
+                    </ListItem>
+                  </Link>
+                </List>
+
+                <List className="p-0">
+                  <Link
+                    to={"/our-vision"}
+                    onClick={() => dispatch(closeNavDrawer())}
+                  >
+                    <ListItem>
+                      <ListItemPrefix>
+                        <FaChevronRight strokeWidth={3} className="h-3 w-5" />
+                      </ListItemPrefix>
+                      Our Vision
+                    </ListItem>
+                  </Link>
+                </List>
+
+                <List className="p-0">
+                  <Link
+                    to={"/contact-us"}
+                    onClick={() => dispatch(closeNavDrawer())}
+                  >
+                    <ListItem>
+                      <ListItemPrefix>
+                        <FaChevronRight strokeWidth={3} className="h-3 w-5" />
+                      </ListItemPrefix>
+                      Contact Us
+                    </ListItem>
+                  </Link>
+                </List>
+              </AccordionBody>
+            </Accordion>
 
             <Accordion
               open={openDropDown === 1}

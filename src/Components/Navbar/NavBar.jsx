@@ -7,9 +7,11 @@ import {
   Card,
   IconButton,
   Collapse,
+  MenuHandler,
 } from "@material-tailwind/react";
 import ProfileMenu from "./ProfileMenu";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
+import { FaBullseye, FaPhoneAlt, FaEye } from "react-icons/fa";
 
 // Icons
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -38,6 +40,73 @@ function MyProfileMenu() {
         </Link>
       )}
     </div>
+  );
+}
+
+function MegaMenu() {
+  return (
+    <Menu allowHover placement="bottom-start">
+      <MenuHandler>
+        <button className="hover:bg-gray-300 p-3 font-bold rounded-lg transition-all">
+          About Us
+        </button>
+      </MenuHandler>
+
+      <MenuList className="w-[30rem] grid grid-cols-3 gap-4 p-4 bg-gray-300 shadow-lg rounded-lg">
+        <NavLink
+          to="/our-mission"
+          className="flex items-center gap-3 p-3 font-medium rounded-lg transition-all bg-gray-50 shadow-md"
+        >
+          <FaBullseye size={20} className="text-blue-500" />
+          Our Mission
+        </NavLink>
+
+        <NavLink
+          to="/our-vision"
+          className="flex items-center gap-3 p-3 font-medium rounded-lg transition-all bg-gray-50 shadow-md"
+        >
+          <FaEye size={20} className="text-blue-500" />
+          Our Vision
+        </NavLink>
+
+        <NavLink
+          to="/contact-us"
+          className="flex items-center gap-3 p-3 font-medium rounded-lg transition-all bg-gray-50 shadow-md"
+        >
+          <FaPhoneAlt size={20} className="text-blue-500" />
+          Contact Us
+        </NavLink>
+
+        <NavLink
+          to="/our-mission"
+          className="flex col-span-3 items-center gap-3 p-3 font-medium rounded-lg transition-all bg-gray-50 shadow-md"
+        >
+          <div className="flex col-span-3 items-center gap-4 p-4 bg-gray-50 rounded-lg shadow-md">
+            <img
+              src="http://localhost:5173/partnership-program-vendor.jpg"
+              alt="Product Image"
+              className="w-24 h-24 object-cover rounded-lg"
+            />
+            <div className="flex flex-col">
+              <h3 className="text-lg font-bold text-gray-800">
+                Become a vendor with us.
+              </h3>
+              <p className="text-sm text-gray-600">
+                DineDash is actively seeking passionate partners like you to
+                join our ever-growing family of premier fast-food
+                establishments.
+              </p>
+              <Link
+                to={"/be-a-partner"}
+                className="mt-2 bg-blue-500 text-white text-center px-4 py-2 rounded-lg hover:bg-blue-600 transition-all"
+              >
+                Become a vendor
+              </Link>
+            </div>
+          </div>
+        </NavLink>
+      </MenuList>
+    </Menu>
   );
 }
 
@@ -163,6 +232,8 @@ function NavList({ closeCollapse }) {
           </NavLink>
         </li>
 
+        <MegaMenu />
+
         <li>
           <button
             className="hover:bg-gray-300 px-3 py-2 rounded-lg transition-all"
@@ -203,7 +274,7 @@ export default function NavBar() {
             alt=""
           />
         </Link>
-        <div className="absolute top-2/4 left-2/4 hidden -translate-x-2/4 -translate-y-2/4 lg:block">
+        <div className="absolute w-[58%] top-2/4 left-2/4 hidden -translate-x-2/4 -translate-y-2/4 lg:block">
           <NavList />
         </div>
         <IconButton

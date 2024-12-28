@@ -50,7 +50,7 @@ const CallToAction = () => {
               </p>
               <div className="mt-4 flex items-center justify-between">
                 <span className="text-xl font-bold text-gray-800">
-                  ${food.price.toFixed(2)}
+                  ৳ {food.price.toFixed(2)}
                 </span>
                 <Link
                   to={`/food-details/${food._id}`}

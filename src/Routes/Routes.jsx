@@ -28,6 +28,7 @@ import ChangePassword from "../Pages/ChangePassword/ChangePassword";
 import ResetPassword from "../Pages/ResetPassword/ResetPassword";
 import BrowseByCategory from "../Pages/BrowseByCategory/BrowseByCategory";
 import OurMissionVision from "../Pages/OurMissionVision/OurMissionVision";
+import ContactUs from "../Pages/ContactUs/ContactUs";
 
 const router = createBrowserRouter([
   {
@@ -90,6 +91,10 @@ const router = createBrowserRouter([
       {
         path: "/our-mission",
         element: <OurMissionVision />,
+      },
+      {
+        path: "/contact-us",
+        element: <ContactUs />,
       },
       {
         path: "/partner-request",

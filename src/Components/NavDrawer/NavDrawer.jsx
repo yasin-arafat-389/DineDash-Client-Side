@@ -128,21 +128,7 @@ const NavDrawer = () => {
                       <ListItemPrefix>
                         <FaChevronRight strokeWidth={3} className="h-3 w-5" />
                       </ListItemPrefix>
-                      Our Mission
-                    </ListItem>
-                  </Link>
-                </List>
-
-                <List className="p-0">
-                  <Link
-                    to={"/our-vision"}
-                    onClick={() => dispatch(closeNavDrawer())}
-                  >
-                    <ListItem>
-                      <ListItemPrefix>
-                        <FaChevronRight strokeWidth={3} className="h-3 w-5" />
-                      </ListItemPrefix>
-                      Our Vision
+                      Our Mission and Vision
                     </ListItem>
                   </Link>
                 </List>

@@ -27,6 +27,7 @@ import Shop from "../Pages/Shop/Shop";
 import ChangePassword from "../Pages/ChangePassword/ChangePassword";
 import ResetPassword from "../Pages/ResetPassword/ResetPassword";
 import BrowseByCategory from "../Pages/BrowseByCategory/BrowseByCategory";
+import OurMissionVision from "../Pages/OurMissionVision/OurMissionVision";
 
 const router = createBrowserRouter([
   {
@@ -85,6 +86,10 @@ const router = createBrowserRouter([
       {
         path: "/reset-password",
         element: <ResetPassword />,
+      },
+      {
+        path: "/our-mission",
+        element: <OurMissionVision />,
       },
       {
         path: "/partner-request",

@@ -11,7 +11,7 @@ import {
 } from "@material-tailwind/react";
 import ProfileMenu from "./ProfileMenu";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
-import { FaBullseye, FaPhoneAlt, FaEye } from "react-icons/fa";
+import { FaBullseye, FaPhoneAlt } from "react-icons/fa";
 
 // Icons
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -52,35 +52,24 @@ function MegaMenu() {
         </button>
       </MenuHandler>
 
-      <MenuList className="w-[30rem] grid grid-cols-3 gap-4 p-4 bg-gray-300 shadow-lg rounded-lg">
-        <NavLink
+      <MenuList className="w-[30rem] grid grid-cols-2 gap-4 p-4 bg-gray-300 shadow-lg rounded-lg">
+        <Link
           to="/our-mission"
           className="flex items-center gap-3 p-3 font-medium rounded-lg transition-all bg-gray-50 shadow-md"
         >
           <FaBullseye size={20} className="text-blue-500" />
-          Our Mission
-        </NavLink>
+          Our Mission and Vision
+        </Link>
 
-        <NavLink
-          to="/our-vision"
-          className="flex items-center gap-3 p-3 font-medium rounded-lg transition-all bg-gray-50 shadow-md"
-        >
-          <FaEye size={20} className="text-blue-500" />
-          Our Vision
-        </NavLink>
-
-        <NavLink
+        <Link
           to="/contact-us"
           className="flex items-center gap-3 p-3 font-medium rounded-lg transition-all bg-gray-50 shadow-md"
         >
           <FaPhoneAlt size={20} className="text-blue-500" />
           Contact Us
-        </NavLink>
+        </Link>
 
-        <NavLink
-          to="/our-mission"
-          className="flex col-span-3 items-center gap-3 p-3 font-medium rounded-lg transition-all bg-gray-50 shadow-md"
-        >
+        <div className="flex col-span-3 items-center gap-3 p-3 font-medium rounded-lg transition-all bg-gray-50 shadow-md">
           <div className="flex col-span-3 items-center gap-4 p-4 bg-gray-50 rounded-lg shadow-md">
             <img
               src="http://localhost:5173/partnership-program-vendor.jpg"
@@ -104,7 +93,7 @@ function MegaMenu() {
               </Link>
             </div>
           </div>
-        </NavLink>
+        </div>
       </MenuList>
     </Menu>
   );

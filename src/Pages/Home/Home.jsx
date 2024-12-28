@@ -4,6 +4,7 @@ import HowItWorks from "../../Components/HowItWorks/HowItWorks";
 import RestaurentsSlider from "../../Components/RestaurentsSlider/RestaurentsSlider";
 import { motion } from "framer-motion";
 import TagCloud from "../../Components/TagCloud/TagCloud";
+import Newsletter from "../../Components/Newsletter/Newsletter";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <RestaurentsSlider />
       <TagCloud />
       <CallToAction />
+      <Newsletter />
     </motion.div>
   );
 };

@@ -95,6 +95,14 @@ const Login = () => {
       });
   };
 
+  const handleDemoUser = () => {
+    // Set demo credentials
+    setFormData({
+      email: "arafat@gmail.com",
+      password: "Arafat*",
+    });
+  };
+
   useEffect(() => {
     if (user) {
       navigate("/");
@@ -109,8 +117,8 @@ const Login = () => {
         <div>
           <div className="bg-[#0A2540]">
             <div className="py-20">
-              <div className="flex w-full max-w-sm mx-auto overflow-hidden  rounded-lg shadow-lg dark:bg-gray-800 lg:max-w-4xl">
-                <div className="hidden bg-gray-200  lg:flex lg:w-1/2">
+              <div className="flex w-full max-w-sm mx-auto overflow-hidden rounded-lg shadow-lg dark:bg-gray-800 lg:max-w-4xl">
+                <div className="hidden bg-gray-200 lg:flex lg:w-1/2">
                   <Lottie animationData={LoginPageAnimation} loop={true} />
                 </div>
 
@@ -147,6 +155,13 @@ const Login = () => {
                     </div>
 
                     <span className="w-1/5 h-[2px] bg-gray-400 lg:w-1/4"></span>
+                  </div>
+
+                  <div
+                    onClick={handleDemoUser}
+                    className="bg-blue-600 text-white p-2 rounded-full text-center my-5 shadow-lg cursor-pointer"
+                  >
+                    Demo User Credentials
                   </div>
 
                   <form onSubmit={handleLogin}>

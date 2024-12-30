@@ -33,7 +33,7 @@ const Newsletter = () => {
 
   return (
     <div>
-      <section className="bg-[#f3f5ed]">
+      <section className="bg-[#f3f5ed] pb-20">
         <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-24 lg:py-3">
           <div className="bg-[#eff6f3] p-8 text-center sm:p-10 md:p-16 border-blue-700 border-2 rounded-lg">
             <h2 className="mb-4 text-3xl font-bold md:text-5xl">

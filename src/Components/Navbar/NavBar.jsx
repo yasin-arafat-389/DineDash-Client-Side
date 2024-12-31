@@ -72,8 +72,8 @@ function MegaMenu() {
         <div className="flex col-span-3 items-center gap-3 p-3 font-medium rounded-lg transition-all bg-gray-50 shadow-md">
           <div className="flex col-span-3 items-center gap-4 p-4 bg-gray-50 rounded-lg shadow-md">
             <img
-              src="http://localhost:5173/partnership-program-vendor.jpg"
-              alt="Product Image"
+              src="https://i.ibb.co.com/jbwvN8K/1589656374290.jpg"
+              alt="Vendor Image"
               className="w-24 h-24 object-cover rounded-lg"
             />
             <div className="flex flex-col">
